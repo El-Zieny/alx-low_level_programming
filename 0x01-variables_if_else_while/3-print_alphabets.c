@@ -4,14 +4,16 @@
  * main - Entry point
  * Return: Always 0 (success)
  */
-int main(void){
+int main(void)
+{
 	int ch;
-	int CH;
+	int CHR;
 
-	for (ch = 'a'; ch < 'z'; ch++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 		putchar(ch);
-	for (CH = 'A'; CH < 'Z'; CH++);
-	putchar(CH);
+
+	for (CHR = 'A'; CHR <= 'Z'; CHR++)
+		putchar(CHR);
 
 	putchar('\n');
 	return (0);
