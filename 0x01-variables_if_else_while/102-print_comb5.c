@@ -18,13 +18,16 @@ int main(void)
 			{
 				for (d = b; d < 10; d++)
 				{
-					putchar('0' + a);
-					putchar('0' + b);
-					putchar(' ');
-					putchar('0' + c);
-					putchar('0' + d);
-					putchar(',');
-					putchar(' ');
+					if (!(a == c && b == d))
+					{
+						putchar('0' + a);
+						putchar('0' + b);
+						putchar(' ');
+						putchar('0' + c);
+						putchar('0' + d);
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}
