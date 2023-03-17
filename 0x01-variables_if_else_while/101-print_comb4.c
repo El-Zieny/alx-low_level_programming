@@ -15,17 +15,17 @@ int main(void)
 		{
 			for (c = b+1; c < 10; c++)
 			{
-				puchar('0' + a);
-				puchar('0' + b);
-				puchar('0' + c);
+				putchar('0' + a);
+				putchar('0' + b);
+				putchar('0' + c);
 				if(!(a == 7 && b == 8 && c==9))
 				{
-					Puchar(44);
-					puchar(32);
+					Putchar(44);
+					putchar(32);
 				}
 			}
 		}
 	}
-	puchar('\n');
+	putchar('\n');
 	return (0);
 }
