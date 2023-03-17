@@ -3,9 +3,8 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/*
+/**
  * main - Entry point
- * Description: 'declares the sign of a anumber'
  * Return: Always 0 (success)
  */
 int main(void)
