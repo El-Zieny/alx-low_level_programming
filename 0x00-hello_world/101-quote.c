@@ -22,6 +22,7 @@ int main(void)
 	putchar(' ');
 	putchar('o');
 	putchar('f');
+	putchar(' ');	
 	putchar('a');
 	putchar('r');
 	putchar('t');
