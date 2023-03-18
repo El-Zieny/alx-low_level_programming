@@ -25,11 +25,11 @@ int main(void)
 						putchar(' ');
 						putchar('0' + c);
 						putchar('0' + d);
-						if (!(a == 9 && (a + b + c + d) == 35))
-						{
-						putchar(',');
-						putchar(' ');
-						}
+					if (!(a == 9 && (a + b + c + d) == 35))
+					{
+					putchar(',');
+					putchar(' ');
+					}
 					}
 				}
 			}
