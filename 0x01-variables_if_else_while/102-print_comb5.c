@@ -18,15 +18,18 @@ int main(void)
 			{
 				for (d = 0; d < 10; d++)
 				{
-					if ((c*10+d) > (a*10+b))
+					if ((c * 10 + d) > (a * 10 + b))
 					{
 						putchar('0' + a);
 						putchar('0' + b);
 						putchar(' ');
 						putchar('0' + c);
 						putchar('0' + d);
-						putchar(',');
-						putchar(' ');
+						if (!(a == 9 && b == 8 && c == 9 && d == 9))
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
 				}
 			}
