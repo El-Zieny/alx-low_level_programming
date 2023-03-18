@@ -27,8 +27,8 @@ int main(void)
 						putchar('0' + d);
 						if (!(a == 9 && (a + b + c + d) == 35))
 						{
-							putchar(',');
-							putchar(' ');
+						putchar(',');
+						putchar(' ');
 						}
 					}
 				}
