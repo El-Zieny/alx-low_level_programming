@@ -14,13 +14,11 @@ int main(void)
 	{
 		for (b = 0; b < 10; b++)
 		{
-			
-			
-			for (c = a; c < 10; c++)
+			for (c = 0; c < 10; c++)
 			{
-				for (d = b; d < 10; d++)
+				for (d = 0; d < 10; d++)
 				{
-					if (!(a == c && b == d))
+					if ((c*10+d) > (a*10+b))
 					{
 						putchar('0' + a);
 						putchar('0' + b);
