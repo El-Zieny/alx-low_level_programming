@@ -15,9 +15,9 @@ int main(void)
 		for (b = 0; b < 10; b++)
 		{
 			c = a;
+			d = b;
 			for (; c < 10; c++)
 			{
-				d = b;
 				for (; d < 10; d++)
 				{
 					if (!(a == c && b == d))
