@@ -12,12 +12,12 @@ int main(void)
 
 	for (a = 0; a < 10; a++)
 	{
-		c = a;
 		for (b = 0; b < 10; b++)
 		{
-			d = b;
+			c = a;
 			for (; c < 10; c++)
 			{
+				d = b;
 				for (; d < 10; d++)
 				{
 					if (!(a == c && b == d))
