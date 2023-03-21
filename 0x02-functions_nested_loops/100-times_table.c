@@ -4,7 +4,7 @@
  * print_times_table - exactly
  * @n: table num
  */
-void print_times_table(int n)
+void print_times_table(const int n)
 {
 	int a[n + 1];
 	int x;
