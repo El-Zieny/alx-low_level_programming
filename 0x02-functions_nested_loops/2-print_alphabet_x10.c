@@ -1,4 +1,7 @@
 #include "main.h"
+/**
+ * print_alphabet_x10 - check the code
+ */
 void print_alphabet_x10(void)
 {
 	int x;
@@ -10,5 +13,4 @@ void print_alphabet_x10(void)
 			_putchar(a);
 		_putchar('\n');
 	}
-	return;
 }
