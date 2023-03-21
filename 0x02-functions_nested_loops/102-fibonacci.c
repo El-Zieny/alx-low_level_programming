@@ -9,7 +9,7 @@ int main(void)
 
 	for (x = 1; x <= 12586269025; x += x)
 	{
-		printf("%d", x);
+		printf("%li", x);
 		if (x != 12586269025)
 			printf(", ");
 		else
