@@ -6,7 +6,7 @@
  */
 void print_times_table(int n)
 {
-	int a[];
+	int a[n + 1];
 	int x;
 	int z, m, t;
 
