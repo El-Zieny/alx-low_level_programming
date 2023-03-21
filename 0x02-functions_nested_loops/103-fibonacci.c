@@ -11,7 +11,7 @@ int main(void)
 
 	x = 1;
 	y = 2;
-	res = 0;
+	res = y;
 	for (n = 0; n < 30; n++)
 	{
 		z = x + y;
@@ -21,7 +21,7 @@ int main(void)
 		x = y;
 		y = z;
 	}
-	printf("%li", res);
+	printf("%li\n", res);
 	return (0);
 
 }
