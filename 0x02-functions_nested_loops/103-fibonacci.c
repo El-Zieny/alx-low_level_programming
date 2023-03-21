@@ -17,5 +17,6 @@ int main(void)
 		if (!m)
 			res += m;
 	}
-		printf("%li", res);
+	printf("%li", res);
+	return (0);
 }
