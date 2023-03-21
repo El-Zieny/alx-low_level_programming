@@ -1,4 +1,7 @@
 #include "main.h"
+/**
+ * _islower - check the code
+ */
 int _islower(int c)
 {
 	if (c > 96 && c < 123)
