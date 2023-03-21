@@ -11,7 +11,7 @@ int main(void)
 
 	x = 1;
 	y = 2;
-	for (n = 0; n < 25; n++)
+	for (n = 0; n < 10; n++)
 	{
 		z = x + y;
 		m = z % 2;
