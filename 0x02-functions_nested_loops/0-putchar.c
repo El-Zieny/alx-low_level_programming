@@ -10,5 +10,6 @@ int main(void)
 
 	for (x = 0; x < 8; x++)
 		_putchar(p[x]);
+	_putchar(' ');
 	return (0);
 }
