@@ -22,6 +22,7 @@ void print_times_table(int n)
 			if (t > 9)
 			_putchar(t / 10 + '0');
 			_putchar(t % 10 + '0');
+			_putchar('\n');
 			if (m != n)
 			{
 			_putchar(',');
