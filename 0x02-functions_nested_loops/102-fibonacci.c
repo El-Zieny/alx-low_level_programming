@@ -6,9 +6,11 @@
 int main(void)
 {
 	long int x;
+	long int z;
 
-	for (x = 1; x <= 12586269025; x += x)
+	for (x = 1; x <= 12586269025; x += z)
 	{
+		z = x;
 		printf("%li", x);
 		if (x != 12586269025)
 			printf(", ");
