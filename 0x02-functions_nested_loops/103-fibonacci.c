@@ -15,7 +15,7 @@ int main(void)
 	{
 		z = x + y;
 		m = z % 2;
-		if (m === 0)
+		if (m == 0 && z < 4000000)
 			res += z;
 		x = y;
 		y = z;
