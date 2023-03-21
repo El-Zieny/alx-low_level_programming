@@ -18,7 +18,9 @@ int main(void)
 		y = 2;
 		z = x + y;
 		printf("%li", x);
+		printf(", ");
 		printf("%li", y);
+		printf(", ");
 		}
 		z = x + y;
 		printf("%li", z);
