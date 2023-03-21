@@ -1,0 +1,19 @@
+#include <stdio.h>
+/**
+ * main - check
+ * Return: Always 0
+ */
+int main(void)
+{
+	int x;
+
+	for (x = 1; x <= 12586269025; x += x)
+	{
+		printf("%d", x);
+		if (x != 12586269025)
+			printf(", ");
+		else
+			printf('\n');
+	}
+	return (0);
+}
