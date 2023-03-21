@@ -17,7 +17,7 @@ int main(void)
 	for (m = 0; m < 1024; m += 5)
 	{
 		test = m % 3;
-		if (test = 0)
+		if (test== 0)
 			f += m;
 	}
 	res = t + f;
