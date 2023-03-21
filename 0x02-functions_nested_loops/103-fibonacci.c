@@ -15,7 +15,7 @@ int main(void)
 		z = x + y;
 		m = z % 2;
 		if (!m)
-			res += m;
+			res += z;
 		x = y;
 		y = z;
 	}
