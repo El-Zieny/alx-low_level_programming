@@ -10,15 +10,15 @@ int main(void)
 	long int z;
 	int n;
 
+	x = 1;
 	for (n = 0; n < 50; n++)
 	{
-		x = 1;
-		y = 2;
-		z = x+y;
 		if (x == 1)
 		{
-			printf("%li", x);
-			printf("%li", y);
+		y = 2;
+		z = x+y;
+		printf("%li", x);
+		printf("%li", y);
 		}
 		printf("%li", z);
 		x = y;
