@@ -11,9 +11,9 @@ int main(void)
 
 	t = 0;
 	f = 0;
-	for (n = 0; n < 10; n += 3)
+	for (n = 0; n < 1024; n += 3)
 		t += n;
-	for (m = 0; m < 10; m += 5)
+	for (m = 0; m < 1024; m += 5)
 		f += m;
 	res = t + f;
 	printf("%d\n", res);
