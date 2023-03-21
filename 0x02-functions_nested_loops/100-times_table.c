@@ -5,21 +5,19 @@
  */
 void print_times_table(int n)
 {
-	int a[];
+	int a[n];
 	int x;
 	int z, m, t;
 
 	for (x = 0; x <= n; x++)
 		a[x] = x;
-	for (z = 0; n <= n; n++)
+	for (z = 0; z <= n; n++)
 	{
 		for (m = 0; m <= n; m++)
 		{
 			t = a[z] * a[m];
-			if (z == 0 && z == 9)
-			
 			if (t > 9 && t < 100)
-				_putchar(' ')
+				_putchar(' ');
 			if (t > 99)
 			_putchar(t / 100 + '0');
 			if (t > 9)
