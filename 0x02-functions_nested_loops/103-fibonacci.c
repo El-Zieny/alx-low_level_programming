@@ -1,7 +1,6 @@
 #include <stdio.h>
 /*
  * main - Entry point
- * Description: 'sum frapichino even values'
  * Return: Always 0 (success)
  */
 int main(void)
