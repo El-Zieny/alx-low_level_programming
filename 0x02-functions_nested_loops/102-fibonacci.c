@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	int x;
+	long int x;
 
 	for (x = 1; x <= 12586269025; x += x)
 	{
@@ -13,7 +13,7 @@ int main(void)
 		if (x != 12586269025)
 			printf(", ");
 		else
-			printf('\n');
+			printf("\n");
 	}
 	return (0);
 }
