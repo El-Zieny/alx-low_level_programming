@@ -12,7 +12,7 @@ int main(void)
 	x = 1;
 	y = 2;
 	res = 0;
-	for (n = 0; n < 3; n++)
+	for (n = 0; n < 30; n++)
 	{
 		z = x + y;
 		m = z % 2;
