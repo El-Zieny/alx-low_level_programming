@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
- * main - sry
+ * main - Entry point
  * Return: Always 0
  */
 int main(void)
@@ -10,12 +10,14 @@ int main(void)
 
 	x = 1;
 	y = 2;
-	for (n =0; n < 30; n++)
+	for (n = 0; n < 30; n++)
 	{
 		z = x + y;
 		m = z % 2;
 		if (!m)
 			res += m;
+		x = y;
+		y = z;
 	}
 	printf("%li", res);
 	return (0);
