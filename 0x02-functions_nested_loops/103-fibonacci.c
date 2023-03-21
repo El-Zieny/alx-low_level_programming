@@ -1,8 +1,8 @@
 #include <stdio.h>
 /*
  * main - Entry point
- * Description: sum frapichino even values
- * Return: Always 0
+ * Description: 'sum frapichino even values'
+ * Return: Always 0 (success)
  */
 int main(void)
 {
@@ -21,7 +21,6 @@ int main(void)
 		y = z;
 	}
 	printf("%li", res);
-	printf("%i", m);
 	return (0);
 
 }
