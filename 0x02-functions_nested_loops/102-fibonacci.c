@@ -6,16 +6,23 @@
 int main(void)
 {
 	long int x;
+	long int y;
 	long int z;
+	int n;
 
-	for (x = 1; x <= 12586269025; x += z)
+	for (n = 0; n < 50; n++)
 	{
-		z = x;
-		printf("%li", x);
-		if (x != 12586269025)
-			printf(", ");
-		else
-			printf("\n");
+		x = 1;
+		y = 2;
+		z = x+y;
+		if (x == 1)
+		{
+			printf("%li", x);
+			printf("%li", y);
+		}
+		printf("%li", z);
+		x = y;
+		y = z;
 	}
 	return (0);
 }
