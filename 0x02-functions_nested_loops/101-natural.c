@@ -12,9 +12,9 @@ int main(void)
 	t = 0;
 	f = 0;
 	for (n = 0; n < 1024 / 3; n += 3)
-		t += 3 * n;
+		t += n;
 	for (m = 0; m < 1024 / 5; m += 5)
-		f += 5 * m;
+		f += m;
 	res = t + f;
 	printf("%d\n", res);
 	return (0);
