@@ -9,6 +9,7 @@ void times_table(void)
 	int n;
 	int x;
 	int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
 	for (x = 0; x < 10; x++)
 	{
 		for (n = 0; n < 10; n++)
