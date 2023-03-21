@@ -20,5 +20,7 @@ int main(void)
 		y = z;
 	}
 	printf("%li", res);
+	printf("%li", m);
 	return (0);
+
 }
