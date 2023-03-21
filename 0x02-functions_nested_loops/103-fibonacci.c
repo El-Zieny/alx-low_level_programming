@@ -1,6 +1,7 @@
 #include <stdio.h>
 /*
  * main - Entry point
+ * Description: sum frapichino even values
  * Return: Always 0
  */
 int main(void)
@@ -14,7 +15,7 @@ int main(void)
 	{
 		z = x + y;
 		m = z % 2;
-		if (!m)
+		if (m == 0)
 			res += z;
 		x = y;
 		y = z;
