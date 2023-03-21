@@ -1,4 +1,7 @@
 #include "main.h"
+/**
+ * jack_bauer - check the code
+ */
 void jack_bauer(void)
 {
 	int a, b, c, d;
