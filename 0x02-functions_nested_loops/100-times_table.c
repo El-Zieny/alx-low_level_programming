@@ -4,19 +4,17 @@
  * print_times_table - exactly
  * @n: table num
  */
-void print_times_table(const int n)
+void print_times_table(int n)
 {
-	int a[n + 1];
-	int x;
-	int z, m, t;
+/*	int a[n + 1];*/
+
+	int x, m, t;
 
 	for (x = 0; x <= n; x++)
-		a[x] = x;
-	for (z = 0; z <= n; n++)
 	{
 		for (m = 0; m <= n; m++)
 		{
-			t = a[z] * a[m];
+			t = x * m;
 			if (t > 9 && t < 100)
 				_putchar(' ');
 			if (t > 99)
