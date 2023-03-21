@@ -14,39 +14,20 @@ void times_table(void)
 		for (n = 0; n < 10; n++)
 		{
 			m = a[x] * a[n];
-			if (n == 9)
-			{
-				if (m > 9)
-				{
+			if (n != 0)
 				_putchar(' ');
-				_putchar('0' + m);
-				_putchar('\n');
-				}
-				else
-				{
-				_putchar(' ');
-				_putchar(' ');
+			if (m < 10)
 				_putchar(m + '0');
-				_putchar('\n');
-				}
-			}
 			else
 			{
-				if (m > 9)
-				{
-				_putchar(' ');
-				_putchar(m + '0');
+				_putchar(m / 10 + '0');
+				_putchar(m % 10 + '0');
+			}
+			if (n != 9)
+			{
 				_putchar(',');
-				}
-				else
-				{
 				_putchar(' ');
-				_putchar(' ');
-				_putchar(m + '0');
-				_putchar(',');
-				}
 			}
 		}
 	}
-	_putchar('\n');
 }
