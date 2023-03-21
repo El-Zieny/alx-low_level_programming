@@ -17,7 +17,7 @@ void print_times_table(int n)
 			t = x * m;
 			if (t > 9 && t < 100)
 				_putchar(' ');
-			else if (t < 9 && m != 0)
+			else if (t < 10 && m != 0)
 			{
 				_putchar(' ');
 				_putchar(' ');
