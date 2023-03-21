@@ -20,6 +20,7 @@ int main(void)
 		printf("%li", x);
 		printf("%li", y);
 		}
+		z = x + y;
 		printf("%li", z);
 		x = y;
 		y = z;
