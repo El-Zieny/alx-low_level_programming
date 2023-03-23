@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * main - is upper
+ * @c: is upper?
  * Return: 1 if upper 0 if else
  */
 int _isupper(int c)
