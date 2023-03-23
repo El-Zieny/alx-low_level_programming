@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - is upper
+ * _isupper - is upper
  * @c: is upper
  * Return: 0 or 1
  */
