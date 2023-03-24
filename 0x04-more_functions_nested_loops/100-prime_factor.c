@@ -15,9 +15,7 @@ int main(void)
 		{
 			for (c = 2; c < (i / 2); c++)
 			{
-				if ((i % c) == 0)
-					break;
-				else
+				if (!((i % c) == 0))
 					res = i;
 			}
 		}
