@@ -13,12 +13,10 @@ int main(void)
 	{
 		if ((num % i) == 0)
 		{
-			for ( c = 2; c < (i / 2); c++)
+			for (c = 2; c < (i / 2); c++)
 			{
 				if ((i % c) == 0)
-				{
 					break;
-				}
 				else
 					res = i;
 			}
