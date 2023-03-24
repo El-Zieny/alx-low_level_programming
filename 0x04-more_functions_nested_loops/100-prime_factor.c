@@ -8,7 +8,7 @@ int main(void)
 	int i, c, res;
 	long int num;
 
-	num = 612852475143 / 2;
+	num = 612852475143;
 	for (i = 2; i < num; i++)
 	{
 		if ((num % i) == 0)
