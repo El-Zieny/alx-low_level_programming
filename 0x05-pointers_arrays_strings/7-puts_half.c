@@ -6,13 +6,13 @@
  */
 void puts_half(char *str)
 {
-	int i = strlen(str);
+	int i = strlen(str), c;
 
 	if (i % 2)
-		i = i / 2 + 1;
+		c = i / 2 + 1;
 	else
-		i = i / 2;
-	for (; i != '\0'; i++)
+		c = i / 2;
+	for (; i != c - 1; i++)
 		_putchar(str[i]);
 	_putchar('\n');
 }
