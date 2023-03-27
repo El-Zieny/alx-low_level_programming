@@ -6,8 +6,9 @@
  */
 void rev_string(char *s)
 {
-	const i = strlen(s) - 1;
-	char c[i];
+
+
+
 
 
 
