@@ -2,16 +2,16 @@
 /**
  * _strlen - string length
  * @s: the string
- * Retunr: integer
+ * Return: integer
  */
 int _strlen(char *s)
 {
 	int c;
 
-	c = sizeof(*s);
+	c = sizeof(s);
 	/**
-	 * for (*(s + c); *s != '\0';)
-	 * 	c += 1;
-	 */
+	* for (*(s + c); *s != '\0';)
+	* 	c += 1;
+	*/
 	return (c);
 }
