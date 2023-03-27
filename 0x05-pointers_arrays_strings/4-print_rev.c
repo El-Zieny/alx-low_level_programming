@@ -5,10 +5,10 @@
  */
 void print_rev(char *s)
 {
-	char *c;
+	char c;
 
-	c = s;
+	c = *s;
 	*s = '\0';
-	for (; s != c; s--)
+	for (; *s != c; s--)
 		_putchar(*s);
 }
