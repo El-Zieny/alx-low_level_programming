@@ -6,7 +6,19 @@
  */
 void rev_string(char *s)
 {
-	char *c;
+	char *c = strrev(s);
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/**	char *c;
 	int i, n = strlen(s), m = n;
 
 	for (i = 0; i < n; i++)
@@ -16,7 +28,7 @@ void rev_string(char *s)
 		*(s + i) = c[m];
 		m--;
 	}
-
+*/
 
 
 
