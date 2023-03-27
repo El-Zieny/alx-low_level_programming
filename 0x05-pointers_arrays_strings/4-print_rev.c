@@ -9,6 +9,6 @@ void print_rev(char *s)
 
 	c = s;
 	*s = '\0';
-	for (; *s != *c; s--)
+	for (; s != c; s--)
 		_putchar(*s);
 }
