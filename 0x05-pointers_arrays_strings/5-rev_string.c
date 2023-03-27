@@ -6,7 +6,49 @@
  */
 void rev_string(char *s)
 {
-	int n = sizeof(s) - 1;
+	strrev(*s);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**	int n = sizeof(s) - 1;
 	char c[n];
 	int i, l;
 	int x;
@@ -20,4 +62,5 @@ void rev_string(char *s)
 		s[i] = c[l];
 		l += 1;
 	}
+	*/
 }
