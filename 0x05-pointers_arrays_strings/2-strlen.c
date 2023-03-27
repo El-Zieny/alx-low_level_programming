@@ -4,7 +4,7 @@
  * @s: the string
  * Retunr: integer
  */
-int _strlen(char *s);
+int _strlen(char *s)
 {
 	int c;
 
