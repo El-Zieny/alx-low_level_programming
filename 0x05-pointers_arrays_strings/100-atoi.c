@@ -10,7 +10,6 @@ int _atoi(char *s)
 	int i, l, m, c, val, min;
 
 	c = 0;
-	p = 0;
 	m = 0;
 	l = strlen(s);
 	val = 0;
