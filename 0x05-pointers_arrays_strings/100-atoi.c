@@ -25,7 +25,7 @@ int _atoi(char *s)
 				break;*/
 				return (min);
 			}
-			if (!(val == 214748364 && s[i] == 8))
+			if (!(val == 214748364)
 				val = val * 10 + (s[i] - '0');
 			if (!(s[i + 1] >= '0' && s[i + 1] <= '9'))
 				break;
