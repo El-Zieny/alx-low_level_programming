@@ -23,10 +23,10 @@ int _atoi(char *s)
 	val = 0;
 	for (i = 0; i < l; i++)
 	{
-		if (s[i] > 47 && s[i] < 58)
+		if (s[i] >= '0' && s[i] <= '9')
 		{
 			c++;
-			if ((s[i + 1] > 47 && s[i + 1] < 58) || i == l)
+			if ((s[i + 1] >= '0' && s[i + 1] <= '9') || i == l)
 			{
 				val = val * 10 + s[i];
 				continue;
