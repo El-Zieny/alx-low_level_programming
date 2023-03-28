@@ -31,8 +31,6 @@ int _atoi(char *s)
 				val = val * 10 + s[i];
 				continue;
 			}
-			else
-				break;
 		}
 	}
 	/**
