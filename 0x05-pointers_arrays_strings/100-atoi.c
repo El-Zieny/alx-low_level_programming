@@ -7,15 +7,12 @@
  */
 int _atoi(char *s)
 {
-	/* int i, l, m, val, min;
+	int i, l, m, val, min;
 
 	m = 0;
 	l = strlen(s);
-	val = 0;*/
-	int min = -2147483648;
-
-	s = s + 1;
-	/**
+	val = 0;
+	min = -2147483648;
 	for (i = 0; i < l; i++)
 	{
 		if (s[i] == '-')
@@ -25,8 +22,7 @@ int _atoi(char *s)
 			val = val * 10 + (s[i] - '0');
 			if (val == 214748364 && s[i + 1] == 8)
 			{
-				val = min;
-				break;
+				return (min);
 			}
 			if (!(s[i + 1] >= '0' && s[i + 1] <= '9'))
 				break;
@@ -36,6 +32,5 @@ int _atoi(char *s)
 	}
 	if (m % 2 && val != min)
 		val = val * -1;
-	*/
-	return (min);
+	return (val);
 }
