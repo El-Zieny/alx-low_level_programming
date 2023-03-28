@@ -13,6 +13,8 @@ int _atoi(char *s)
 	l = strlen(s);
 	val = 0;*/
 	int min = -2147483648;
+
+	s = s + 1;
 	/**
 	for (i = 0; i < l; i++)
 	{
