@@ -7,6 +7,6 @@
  */
 int _atoi(char *s)
 {
-	putchar(s);
+	putchar(s[3]);
 	return (0);
 }
