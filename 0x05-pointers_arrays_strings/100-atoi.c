@@ -19,12 +19,12 @@ int _atoi(char *s)
 			m += 1;
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			val = val * 10 + (s[i] - '0');
 			if (val == 214748364 && s[i + 1] == 8)
 			{
 				val = min;
 				break;
 			}
+			val = val * 10 + (s[i] - '0');
 			if (!(s[i + 1] >= '0' && s[i + 1] <= '9'))
 				break;
 			if ((i + 1) == l)
