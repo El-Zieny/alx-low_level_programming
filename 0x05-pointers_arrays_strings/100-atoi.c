@@ -23,6 +23,7 @@ int _atoi(char *s)
 			if (val == 214748364 && s[i + 1] == 8)
 			{
 				return (min);
+				break;
 			}
 			if (!(s[i + 1] >= '0' && s[i + 1] <= '9'))
 				break;
