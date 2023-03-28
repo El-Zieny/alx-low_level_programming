@@ -2,9 +2,10 @@
 /**
  * _atoi - string to int
  * @s: string
- * Return: depends
+ * Return: 0 (success)
  */
 int _atoi(char *s)
 {
+	printf("%s", s);
 	return (0);
 }
