@@ -15,13 +15,9 @@ int _atoi(char *s)
 	l = strlen(s);
 	for (i = 0; i < l; i++)
 	{
-		/**
-		 * if (s[i] == '+')
-			p += 1;
-		
-		else 
-		*/
-		if (s[i] == '-')
+		if (s[i] == '+')
+			p += 1;		
+		else if (s[i] == '-')
 			m += 1;
 	}
 	val = 0;
