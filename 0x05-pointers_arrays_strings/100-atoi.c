@@ -25,8 +25,9 @@ int _atoi(char *s)
 	{
 		if (s[i] > 47 && s[i] < 58)
 		{
-			res[c++] = s[i];
-			if (s[i + 1] > 47 && s[i + 1] < 58)
+			res[c] = s[i];
+			c++;
+			if (s[i + 1] > 47 && s[i + 1] < 58 || i == l)
 				continue;
 			else
 				break;
