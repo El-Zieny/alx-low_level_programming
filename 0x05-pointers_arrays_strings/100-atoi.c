@@ -30,7 +30,8 @@ int _atoi(char *s)
 				break;
 		}
 	}
-	if (m % 2 && val != min)
+	if (m % 2)
 		val = val * -1;
-	return (val);
+	if (val != min)
+		return (val);
 }
