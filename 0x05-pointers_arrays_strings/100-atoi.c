@@ -13,16 +13,21 @@ int _atoi(char *s)
 	p = 0;
 	m = 0;
 	l = strlen(s);
-	for (i = 0; i < l; i++)
+/**	for (i = 0; i < l; i++)
 	{
 		if (s[i] == '+')
-			p += 1;		
+			p += 1;
 		else if (s[i] == '-')
 			m += 1;
 	}
+	*/
 	val = 0;
 	for (i = 0; i < l; i++)
 	{
+		if (s[i] == '+')
+			p += 1;
+		else if (s[i] == '-')
+			m += 1;
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			c++;
