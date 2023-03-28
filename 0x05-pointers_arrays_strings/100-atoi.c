@@ -27,10 +27,12 @@ int _atoi(char *s)
 		{
 			c++;
 			val = val * 10 + s[i];
-			if (!((s[i + 1] >= '0' && s[i + 1] <= '9') || (i + 1) == l))
+			if (!(s[i + 1] >= '0' && s[i + 1] <= '9'))
 			{
 				break;
 			}
+			if ((i + 1) == l)
+				break;
 		}
 	}
 	/**
