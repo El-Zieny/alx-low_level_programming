@@ -7,6 +7,6 @@
  */
 int _atoi(char *s)
 {
-	printf("%d", s);
+	putchar(s);
 	return (0);
 }
