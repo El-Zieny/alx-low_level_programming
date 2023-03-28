@@ -7,12 +7,13 @@
  */
 int _atoi(char *s)
 {
-	int i, l, m, val, min;
+	/* int i, l, m, val, min;
 
 	m = 0;
 	l = strlen(s);
-	val = 0;
-	min = -2147483648;
+	val = 0;*/
+	int min = -2147483648;
+	/**
 	for (i = 0; i < l; i++)
 	{
 		if (s[i] == '-')
@@ -33,5 +34,6 @@ int _atoi(char *s)
 	}
 	if (m % 2 && val != min)
 		val = val * -1;
+	*/
 	return (min);
 }
