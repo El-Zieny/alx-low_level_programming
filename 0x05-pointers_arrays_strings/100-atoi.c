@@ -9,7 +9,6 @@ int _atoi(char *s)
 {
 	int i, l, m, c, val, min;
 
-	c = 0;
 	m = 0;
 	l = strlen(s);
 	val = 0;
@@ -20,7 +19,6 @@ int _atoi(char *s)
 			m += 1;
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			c++;
 			val = val * 10 + (s[i] - '0');
 			if (val == 214748364 && s[i + 1] == 8)
 			{
@@ -35,5 +33,5 @@ int _atoi(char *s)
 	}
 	if (m % 2 && val != min)
 		val = val * -1;
-	return (val);
+	return (min);
 }
