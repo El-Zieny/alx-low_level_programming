@@ -15,9 +15,13 @@ int _atoi(char *s)
 	l = strlen(s);
 	for (i = 0; i < l; i++)
 	{
-		if (s[i] == '+')
+		/**
+		 * if (s[i] == '+')
 			p += 1;
-		else if (s[i] == '-')
+		
+		else 
+		*/
+		if (s[i] == '-')
 			m += 1;
 	}
 	val = 0;
@@ -35,26 +39,7 @@ int _atoi(char *s)
 				break;
 		}
 	}
-	/**
-	 * for (i = 0; i < c; i++)
-	{
-		if (s[i] > 47 && s[i] < 58)
-		{
-			for (n = c; c != 0; c--)
-			{
-				val = val + s[i] * 10;
-			}
-				if ((s[i + 1] > 47 && s[i + 1] < 58) || i == l)
-				continue;
-			else
-				break;
-		}
-	}
-	val = 0;
-	for (i = 0; i < c; i++)
-		val = val * 10 + (res[i] - '0');
-		*/
-	if (m > p)
+	if (m % 2)
 		val = val * -1;
 	return (val);
 }
