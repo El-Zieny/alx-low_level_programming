@@ -21,7 +21,7 @@ int _atoi(char *s)
 		{
 			if (val == 214748364 && s[i] == 8)
 			{
-				val -+ 1;
+				val -= 1;
 				val = min;
 				break;
 			}
