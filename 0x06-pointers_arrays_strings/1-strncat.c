@@ -1,10 +1,11 @@
 #include "main.h"
 #include <string.h>
 /**
- * _strncat - limitable
+ * _strncat - check the code
  * @dest: destination
  * @src: source
  * @n: limitation
+ * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
