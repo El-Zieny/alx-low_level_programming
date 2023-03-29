@@ -19,9 +19,8 @@ int _atoi(char *s)
 			m += 1;
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			if (val == 214748364 && s[i] == 8)
+			if (val == 214748364 && s[i] > 7)
 			{
-				val -= 1;
 				val = min;
 				break;
 			}
