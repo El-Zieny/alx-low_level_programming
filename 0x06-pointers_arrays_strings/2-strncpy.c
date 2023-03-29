@@ -8,18 +8,19 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	int i, l;
 
 	/*
 	 * int l;
 	 * l = strlen(src);
 	if (n > l)
 		n = l + 1;*/
+	l = strlen(src);
 	for (i = 0; i < n; i++)
 	{
 		dest[i] = src[i];
-		if (src[i] == '\0')
-			break;
 	}
+	if (n < l)
+		dest[++i] = '\0';
 	return (dest);
 }
