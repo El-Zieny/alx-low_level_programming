@@ -1,7 +1,7 @@
 /**
  * reverse_array - check the code
  * @a: the array
- * n: its length
+ * @n: its length
  */
 void reverse_array(int *a, int n)
 {
