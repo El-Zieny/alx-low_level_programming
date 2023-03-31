@@ -1,7 +1,7 @@
 #include <string.h>
 /**
  * string_toupper - check the code
- * @: the string
+ * @s: the string
  * Return: uppercase string
  */
 char *string_toupper(char *s)
