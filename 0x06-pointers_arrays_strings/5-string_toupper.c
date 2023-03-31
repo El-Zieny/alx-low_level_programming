@@ -1,12 +1,18 @@
+#include <string.h>
 /**
  * string_toupper - check the code
  * @: the string
  * Return: uppercase string
  */
-char *string_toupper(char *)
+char *string_toupper(char *s)
 {
-	int i;
+	int i, l;
 
-	for (i = 0; i < INT_MAX; i++)
-
+	l = strlen(s);
+	for (i = 0; i < l; i++)
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] = s[i] - 32;
+	}
+	return (s);
 }
