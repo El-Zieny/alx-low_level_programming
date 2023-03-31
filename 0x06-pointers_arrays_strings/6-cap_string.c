@@ -10,7 +10,7 @@ char *cap_string(char *s)
 	       '!', '?', '"', '(', ')', '{', '}'};
 	int l, i, x;
 
-	l = strlen(s);
+	l = strlen(s) - 1;
 	for (i = 0; i < l; i++)
 	{
 		for (x = 0; x < 13; x++)
