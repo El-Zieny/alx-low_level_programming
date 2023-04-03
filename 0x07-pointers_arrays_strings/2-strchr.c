@@ -1,4 +1,3 @@
-#include <string.h>
 /**
  * _strchr - check the code
  * @s: the string
@@ -7,16 +6,14 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i, x, v, l, tmp, chck;
+	int i, x, tmp, chck;
 
 	chck = 0;
-	l = strlen(s);
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] != 0; i++)
 	{
 		if (s[i] == c)
 		{
-			v = l - i;
-			for (x = 0; x < v; x++)
+			for (x = 0; s[i] != 0; x++)
 			{
 				tmp = s[i];
 				s[x] = tmp;
@@ -29,5 +26,5 @@ char *_strchr(char *s, char c)
 	if (chck)
 		return (s);
 	else
-		return (NULL);
+		return ('\0');
 }
