@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string>
+#include <string.h>
 /**
  * _strchr - check the code
  * @s: the string
@@ -8,13 +8,27 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i, l;
+	int i, x, v, l, tmp, chck;
 
+	chck = 0;
 	l = strlen(s);
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
-			return (s[i]);
+		{
+			v = l - i;
+			for (x = 0; x < v; x++)
+			{
+				tmp = s[i];
+				s[x] = tmp;
+				i++;
+			}
+			chck = 1;
+			break;
+		}
 	}
-	return (NULL);
+	if (chck)
+		return (s);
+	else
+		return (NULL);
 }
