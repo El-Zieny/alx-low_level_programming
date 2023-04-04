@@ -7,16 +7,17 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, x, n, val, l;
+	int i, x, n, val, l1, l2;
 
-	l = strlen(needle);
-	for (i = 0; haystack[i] != '\0'; i++)
+	l1 = strlen(haystack);
+	l2 = strlen(needle);
+	for (i = 0; i < l1; i++)
 	{
 		if (haystack[i] == needle[0])
 		{
 			n = i + 1;
 			val = 1;
-			for (x = 1; needle[x] != '\0'; x++)
+			for (x = 1; x < l2; x++)
 			{
 				if (haystack[n] == needle[x])
 				{
@@ -24,7 +25,7 @@ char *_strstr(char *haystack, char *needle)
 					val++;
 				}
 			}
-			if (val == l)
+			if (val == l2)
 				return (&haystack[i]);
 		}
 	}
