@@ -12,7 +12,7 @@ int sqr(int n, int i)
 		return (-1);
 	if (sq == n)
 		return (i);
-	return sqr(n, i + 1);
+	return (sqr(n, i + 1));
 }
 
 
