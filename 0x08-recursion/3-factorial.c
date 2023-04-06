@@ -1,6 +1,6 @@
 /**
  * factorial - returns the factorial of a given number
- * @b: the num to be factorialed
+ * @n: the num to be factorialed
  * Return: the factorial result
  */
 int factorial(int n)
