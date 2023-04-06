@@ -1,6 +1,6 @@
 /**
  * _pow_recursion - x power y
- * @n: base
+ * @x: base
  * @y: the power
  * Return: the result
  */
