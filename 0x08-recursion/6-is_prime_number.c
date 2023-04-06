@@ -10,12 +10,12 @@ int _test(int n, int i)
 		return (1);
 	if (n % i == 0)
 		return (0);
-	return(_test(n, i - 1));
+	return (_test(n, i - 1));
 }
 /**
  * is_prime_number - check the code
  * @n: testing it
- * @Return: 1 if prime, else 0
+ * Return: 1 if prime, else 0
  */
 int is_prime_number(int n)
 {
