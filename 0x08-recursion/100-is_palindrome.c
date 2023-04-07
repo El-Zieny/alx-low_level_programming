@@ -5,10 +5,5 @@
  */
 int is_palindrome(char *s)
 {
-	int l;
-
-	l = _strlen(s);
-	if (l % 2)
-		return (1);
 	return (1);
 }
