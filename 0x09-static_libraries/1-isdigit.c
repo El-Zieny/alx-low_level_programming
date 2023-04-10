@@ -1,4 +1,3 @@
-#include "main.h"
 /**
  * _isdigit - is digit or not
  * @c: is it a digit?
