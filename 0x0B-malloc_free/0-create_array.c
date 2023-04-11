@@ -6,5 +6,7 @@
  */
 char *create_array(unsigned int size, char c)
 {
+	(void) size;
+	(void) c;
 	return ('\0');
 }
