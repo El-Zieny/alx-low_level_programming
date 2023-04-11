@@ -6,5 +6,5 @@
 char *_strdup(char *str)
 {
 	(void) str;
-	return (\0');
+	return ('\0');
 }
