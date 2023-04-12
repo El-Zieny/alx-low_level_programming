@@ -6,7 +6,11 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	(void) size;
-	(void) c;
-	return ('\0');
+	char *arr = '\0';
+
+	if (!size)
+		return ('\0');
+	arr = malloc(sizeof(c) * size);
+	memset(arr, c, sizeof(c) * size);
+	return (arr);
 }
