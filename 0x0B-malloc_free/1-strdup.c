@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdlib.h>
 /**
  * _strdup - check the code
  * @str: string
