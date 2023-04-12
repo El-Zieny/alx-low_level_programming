@@ -11,7 +11,7 @@ char *str_concat(char *s1, char *s2)
 	char *conc;
 	unsigned int i, x;
 
-	conc = malloc(strlen(s1) + strlen(s2));
+	conc = malloc(strlen(s1) + strlen(s2) + 1);
 	if (!conc)
 		return ('\0');
 	for (i = 0; i < strlen(s1); i++)
@@ -22,5 +22,6 @@ char *str_concat(char *s1, char *s2)
 		conc[i] = s2[x];
 		x++;
 	}
+	conc[strlen(s1) + strlen(s2)] = '\0';
 	return (conc);
 }
