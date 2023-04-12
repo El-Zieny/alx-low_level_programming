@@ -11,6 +11,8 @@ char *str_concat(char *s1, char *s2)
 	char *conc;
 	unsigned int i, x, l1, l2;
 
+	l1 = 0;
+	l2 = 0;
 	if (s1)
 		l1 = strlen(s1);
 	if (s2)
