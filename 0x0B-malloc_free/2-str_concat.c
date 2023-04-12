@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdlib.h>
 /**
  * str_concat - check the code
  * @s1: s1
@@ -8,7 +9,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *conc;
-	int i;
+	unsigned int i;
 
 	conc = malloc(strlen(s1) + strlen(s2));
 	if (!conc)
