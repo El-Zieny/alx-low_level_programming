@@ -9,19 +9,23 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *conc;
-	unsigned int i, x;
+	unsigned int i, x, l1, l2;
 
-	conc = malloc(strlen(s1) + strlen(s2) + 1);
+	if (s1)
+		l1 = strlen(s1);
+	if (s2)
+		l2 = strlen(s2);
+	conc = malloc(l1 + l2 + 1);
 	if (!conc)
 		return ('\0');
-	for (i = 0; i < strlen(s1); i++)
+	for (i = 0; i < l1; i++)
 		conc[i] = s1[i];
 	x = 0;
-	for (i = strlen(s1); i < strlen(s1) + strlen(s2); i++)
+	for (i = l1; i < l1 + l2; i++)
 	{
 		conc[i] = s2[x];
 		x++;
 	}
-	conc[strlen(s1) + strlen(s2)] = '\0';
+	conc[l1 + l2] = '\0';
 	return (conc);
 }
