@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <string.h>
 /**
  * create_array - check the code
  * @size: size
