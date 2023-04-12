@@ -13,6 +13,7 @@ char *create_array(unsigned int size, char c)
 	if (!size)
 		return ('\0');
 	arr = malloc(sizeof(c) * size);
-	memset(arr, c, sizeof(c) * size);
+	if (arr)
+		memset(arr, c, sizeof(c) * size);
 	return (arr);
 }
