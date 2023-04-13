@@ -2,9 +2,18 @@
 /**
  * malloc_checked - check the code
  * @b: bytes
+ * Return: pointer
  */
 void *malloc_checked(unsigned int b)
 {
-	return(malloc(b));
+	void *ptr;
+
+	ptr = malloc(b);
+	if (!ptr)
+	{
+		free(ptr);
+		exit(98);
+	}
+	return (malloc(b));
 
 }
