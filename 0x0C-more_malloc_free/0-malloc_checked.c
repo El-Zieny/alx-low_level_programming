@@ -10,10 +10,7 @@ void *malloc_checked(unsigned int b)
 
 	ptr = malloc(b);
 	if (!ptr)
-	{
-		free(ptr);
 		exit(98);
-	}
 	return (malloc(b));
 
 }
