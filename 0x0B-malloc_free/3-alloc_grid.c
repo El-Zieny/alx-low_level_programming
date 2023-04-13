@@ -1,3 +1,4 @@
+#include <stdlib.h>
 /**
  * alloc_grid - check the code
  * @width: true
@@ -6,7 +7,19 @@
  */
 int **alloc_grid(int width, int height)
 {
-	(void) width;
-	(void) height;
-	return ('\0');
+	int *arr;
+	unsigned int i;
+
+	if (width < 1 || height < 1)
+		return ('\0');
+	arr = malloc(sizeof(int) * height);
+	if (!arr)
+		return ('\0');
+	for (i = 0; i < height; i++)
+	{
+		arr[i] = malloc(sizeof(int) * width);
+		if (!arr[i])
+			return ('\0');
+	}
+	return (arr);
 }
