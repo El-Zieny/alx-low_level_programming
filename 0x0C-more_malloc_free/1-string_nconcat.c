@@ -16,10 +16,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	m = strlen(s2);
 	res = malloc(n + l + 1);
 	if (!res)
-	{
-		free(res);
 		return ('\0');
-	}
 	if (n > m)
 		n = m;
 	memcpy(res, s1, l);
