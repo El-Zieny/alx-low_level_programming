@@ -20,7 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > m)
 		n = m;
 	memcpy(res, s1, l);
-	memcpy(&res[l], s2, n);
+	memcpy(res + l, s2, n);
 	res[l + n + 1] = '\0';
 	return (res);
 }
