@@ -18,7 +18,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = m;
 	res = malloc(n + l + 1);
 	if (!res)
-		return ('\0');gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-string_nconcat.c
+		return ('\0');
 	memcpy(res, s1, l);
 	memcpy(res + l - 1, s2, n);
 	res[l + n + 1] = '\0';
