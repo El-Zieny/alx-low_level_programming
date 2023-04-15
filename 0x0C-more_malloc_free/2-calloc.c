@@ -10,8 +10,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (!nmemb || !size)
 		return ('\0');
-	arr = malloc(nmemb*size);
+	arr = malloc(nmemb * size);
 	if (!arr)
 		return ('\0');
+	memset(arr, 0, nmemb * size)
 	return (arr);
 }
