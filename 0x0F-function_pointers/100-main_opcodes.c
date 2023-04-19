@@ -9,9 +9,11 @@ void main(int argc, char *argv)
 	{
 		printf("Error\n");
 		exit(1);
+	}
 	if (argv[0] < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
+	return;
 }
