@@ -3,7 +3,7 @@
 /**
  * main - check the code
  */
-void main(int argc, char *argv)
+void main(int argc, char **argv)
 {
 	if (argc > 1)
 	{
