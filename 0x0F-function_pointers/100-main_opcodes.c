@@ -1,6 +1,6 @@
 /**
  * main - check the code
  */
-void main()
+void main(void)
 {
 }
