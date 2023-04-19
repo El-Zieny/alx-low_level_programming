@@ -2,8 +2,10 @@
 #include <stdlib.h>
 /**
  * main - check the code
+ * @argc: arg counter
+ * @argv: arg vector
  */
-void main(int argc, char **argv)
+void main(int argc, char *argv)
 {
 	if (argc > 1)
 	{
@@ -15,5 +17,4 @@ void main(int argc, char **argv)
 		printf("Error\n");
 		exit(2);
 	}
-	return;
 }
