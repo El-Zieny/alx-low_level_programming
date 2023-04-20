@@ -5,6 +5,8 @@
  * @name: its name
  * @age: its age
  * @owner: its owner
+ *
+ * Description: struct that could be used to describe anydog
  */
 typedef struct dog dog;
 struct dog
