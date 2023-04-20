@@ -8,11 +8,11 @@
  *
  * Description: struct that could be used to describe anydog
  */
-typedef struct dog dog;
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+}
+dog;
 #endif
