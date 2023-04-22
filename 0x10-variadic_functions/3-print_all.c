@@ -9,6 +9,7 @@ void print_all(const char * const format, ...)
 {
 	int i, fl;
 	va_list all;
+	char *x;
 
 	fl = strlen(format);
 	va_start(all, format);
@@ -27,12 +28,22 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(all, double));
 				break;
 			case 's':
-				printf("%s", va_arg(all, char *));
+				x = va_arg(all, char *);
+				if (x)
+				{
+					printf("%s", x);
+					break;
+				}
+				printf("(nil)");
 				break;
 		}
-		if (format[i] == 'c' || format[i] == 'i' ||format[i] == 'f' ||format[i] == 's')
-			if (fl != i + 1)
+		if (format[i] == 'c' || format[i] == 'i' ||
+				format[i] == 'f' || format[i] == 's')
+			while (fl != i + 1)
+			{
 				printf(", ");
+				break;
+			}
 		i++;
 	}
 	printf("\n");
