@@ -7,14 +7,11 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i, fl, z;
+	unsigned int i = 0, z;
 	va_list all;
 	char *x;
 
-	if (!format)
-		return;
 	va_start(all, format);
-	i = 0;
 	while (i < strlen(format))
 	{
 		z = 0;
@@ -41,10 +38,10 @@ void print_all(const char * const format, ...)
 		}
 		while (strlen(format) != i + 1 && z)
 		{
-			printf(", ");
-			break;
+			printf(", "), z = 0;
 		}
 		i++;
 	}
 	printf("\n");
+	va_end(all);
 }
