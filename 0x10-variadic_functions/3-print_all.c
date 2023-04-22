@@ -12,7 +12,10 @@ void print_all(const char * const format, ...)
 	char *x;
 
 	if (!format)
+	{
+		printf("\n");
 		return;
+	}
 	va_start(all, format);
 	while (i < strlen(format))
 	{
@@ -22,7 +25,7 @@ void print_all(const char * const format, ...)
 			case 'c':
 				printf("%c", va_arg(all, int)), z++;
 				break;
-			case 'i':
+		D	case 'i':
 				printf("%d", va_arg(all, int)), z++;
 				break;
 			case 'f':
@@ -45,5 +48,4 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-	va_end(all);
 }
