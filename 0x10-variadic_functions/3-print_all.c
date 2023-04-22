@@ -11,6 +11,8 @@ void print_all(const char * const format, ...)
 	va_list all;
 	char *x;
 
+	if(!format)
+		return;
 	fl = strlen(format);
 	va_start(all, format);
 	i = 0;
@@ -37,13 +39,11 @@ void print_all(const char * const format, ...)
 				printf("(nil)");
 				break;
 		}
-		if (format[i] == 'c' || format[i] == 'i' ||
-				format[i] == 'f' || format[i] == 's')
-			while (fl != i + 1)
-			{
-				printf(", ");
-				break;
-			}
+		while (fl != i + 1)
+		{
+			printf(", ");
+			break;
+		}
 		i++;
 	}
 	printf("\n");
