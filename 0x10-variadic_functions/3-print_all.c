@@ -11,11 +11,6 @@ void print_all(const char * const format, ...)
 	va_list all;
 	char *x;
 
-	if (!format)
-	{
-		printf("\n");
-		return;
-	}
 	va_start(all, format);
 	while (i < strlen(format))
 	{
@@ -48,4 +43,6 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
+	if (!format)
+		return;
 }
