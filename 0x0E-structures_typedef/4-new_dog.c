@@ -6,15 +6,17 @@
  * @name: its name member
  * @age: its age member
  * @owner: its owner member
- * Retur: struct
+ * Return: struct
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *s;
-	int l1, l2;
-
-	l1 = strlen(name);
-	l2 = strlen(owner);
+	/*
+*	int l1, l2;
+*
+*	l1 = strlen(name);
+*	l2 = strlen(owner);
+	*/
 	s = malloc(sizeof(dog_t));
 	if (!s)
 		return ('\0');
