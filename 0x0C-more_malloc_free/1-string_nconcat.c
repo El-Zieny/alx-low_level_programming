@@ -23,6 +23,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		memcpy(res, s1, l);
 	if (s2)
 		memcpy(res + l, s2, n);
-	res[strlen(res)] = '\0';
+	res[strlen(res) + 1] = '\0';
 	return (res);
 }
