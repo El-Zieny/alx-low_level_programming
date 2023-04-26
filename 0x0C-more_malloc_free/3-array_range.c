@@ -13,7 +13,7 @@ int *array_range(int min, int max)
 		return ('\0');
 	arr = malloc(sizeof(int) * (max - min + 1));
 	if (!arr)
-		return('\0');
+		return ('\0');
 	n = min;
 	i = 0;
 	while (n <= max)
