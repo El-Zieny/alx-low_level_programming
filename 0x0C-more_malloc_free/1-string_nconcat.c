@@ -24,5 +24,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2)
 		memcpy(res + l, s2, n);
 	res[strlen(res)] = '\0';
+	free(t);
 	return (res);
 }
