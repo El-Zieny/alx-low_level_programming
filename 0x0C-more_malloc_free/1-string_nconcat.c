@@ -12,17 +12,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int l, m;
 	char *res;
 
+	if (!s1)
+		s1 = "";
+	if (!s2)
+		s2 = "";
 	l = strlen(s1);
 	m = strlen(s2);
 	if (n > m)
 		n = m;
 	res = malloc(n + l + 1);
-	if (!res || !n)
+	if (!res)
 		return ('\0');
-	if (s1)
-		memcpy(res, s1, l);
-	if (s2)
-		memcpy(res + l, s2, n);
+	memcpy(res, s1, l);
+	memcpy(res + l, s2, n);
 	res[strlen(res) + 1] = '\0';
 	return (res);
 }
