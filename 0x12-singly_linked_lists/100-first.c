@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * before_main - before main
+ * myStartupFun - function
  */
-void before_main (void) __attribute__ ((constructor));
+void myStartupFun(void) __attribute__ ((constructor));
 /**
  * before_main - prints before main function exucuted
  */
