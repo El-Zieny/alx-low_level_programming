@@ -1,5 +1,9 @@
 #include <stdio.h>
 /**
+ * before_main - before main
+ */
+void before_main (void) __attribute__ ((constructor));
+/**
  * before_main - prints before main function exucuted
  */
 void before_main(void)
