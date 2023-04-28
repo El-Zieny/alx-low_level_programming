@@ -2,7 +2,7 @@
 /**
  * before_main - function
  */
-void before_main(void) __attribute__ ((constructor))
+void before_main(void) __attribute__ ((constructor));
 /**
  * before_main - prints before main function exucuted
  */
