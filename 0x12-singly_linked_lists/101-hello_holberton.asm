@@ -1,9 +1,10 @@
-section .data
-	h db "Hello, Holberton", 10
+global main
 
-section .h
-	global _start
-_start:
+section .data
+	h: db "Hello, Holberton", 10
+
+section .text
+main:
 	mov rax, 1
 	mov rdi, 1
 	mov rsi, h
