@@ -1,5 +1,4 @@
 #include <stdio.h>
-void myStartupFun (void) __attribute__ ((constructor));
 /**
  * before_main - prints before main function exucuted
  */
