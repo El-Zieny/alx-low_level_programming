@@ -1,8 +1,8 @@
-#include <stdlib.h>
 #include "lists.h"
+
 /**
- * free_list - frees a list_t list
- * @head: a list to be freed
+ * free_list - free all list allocated memory
+ * @head: pointer to the first node in the list
  */
 void free_list(list_t *head)
 {
