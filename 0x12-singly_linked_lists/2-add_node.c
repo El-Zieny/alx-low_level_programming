@@ -8,7 +8,7 @@
  * @str: str to be duplicated into the new added node
  * Return: address of new node or null
  */
-list_t add_node(list_t **head, const char *str)
+list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
 
