@@ -10,8 +10,8 @@ listint_t *add_nodein_end(listint_t **head, const int n)
 	listint_t *new;
 
 	while (head)
-		*head = head->next;
-	head->next = new;
+		*head = *head->next;
+	*head->next = new;
 	new->n = n;
 	new->next = NULL;
 	return (new);
