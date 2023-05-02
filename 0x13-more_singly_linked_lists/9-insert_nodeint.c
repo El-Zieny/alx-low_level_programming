@@ -4,6 +4,7 @@
  * @head: the head of the list
  * @idx: the index of the new inserted node
  * @n: the value of n member of the new node
+ * Return: the new added node
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
@@ -21,8 +22,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		if (!tmp->next && x == idx - 2)
 		{
-			tmp = tmp->next;
-			break;
+			tmp->next = new;
+			new->next = NULL;
+			return (new);
 		}
 		if (!tmp->next)
 			return (NULL);
