@@ -6,7 +6,7 @@
  */
 int pop_listint(listint_t **head)
 {
-	listint_t delete;
+	listint_t *delete;
 	int x;
 
 	if (!head || !*head)
