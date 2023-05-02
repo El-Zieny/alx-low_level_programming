@@ -6,6 +6,10 @@
  */
 int pop_listint(listint_t **head)
 {
-	head->next = NULL;
-	return (head->n);
+	in x;
+
+	if (!head)
+		return (0);
+	head = head->next;
+	return (x);
 }
