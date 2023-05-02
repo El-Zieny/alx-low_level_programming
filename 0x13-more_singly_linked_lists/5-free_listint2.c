@@ -10,6 +10,7 @@ void free_listint2(listint_t **head)
 	if (!*head || !head)
 		return;
 	node = *head;
+	free(head);
 	*head = NULL;
 	while (node != NULL)
 	{
