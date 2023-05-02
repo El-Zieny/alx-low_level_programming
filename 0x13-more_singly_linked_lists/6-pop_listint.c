@@ -6,10 +6,13 @@
  */
 int pop_listint(listint_t **head)
 {
+	listint_t delete;
 	int x;
 
 	if (!head || !*head)
 		return (0);
+	delete = *head
 	*head = (*head)->next;
+	free(delete);
 	return (head->n);
 }
