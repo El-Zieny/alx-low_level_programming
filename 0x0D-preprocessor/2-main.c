@@ -5,6 +5,8 @@
  */
 int main(void)
 {
-	printf("%s\n", __FILE__);
+	const char *s = __FILE__;
+
+	printf("%s\n", s);
 	return (1);
 }
