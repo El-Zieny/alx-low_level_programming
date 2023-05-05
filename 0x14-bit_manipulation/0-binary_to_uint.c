@@ -3,7 +3,7 @@
  * _pow - power
  * @base: the base number
  * @power: the power number
- * Rteurn: the result
+ * Return: the result
  */
 
 unsigned int _pow(unsigned int base, unsigned int power)
@@ -23,7 +23,7 @@ unsigned int _pow(unsigned int base, unsigned int power)
 /**
  * binary_to_uint - converts a binary string to an unsigned int
  * @b: the string of the binary number
- * Rteurn: the uint result of the conversion or 0 if fail
+ * Return: the uint result of the conversion or 0 if fail
  */
 unsigned int binary_to_uint(const char *b)
 {
@@ -38,7 +38,7 @@ unsigned int binary_to_uint(const char *b)
 	while (c >= 0)
 	{
 		if (b[c] == '1')
-			i += _pow(2, (x - 1 ) - c);
+			i += _pow(2, (x - 1) - c);
 		else if (b[c] != '0')
 			return (0);
 		c--;
