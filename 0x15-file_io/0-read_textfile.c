@@ -9,7 +9,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *read;
 	FILE *fd;
-	int x;
+	unsigned int x;
 
 	if (!filename)
 		return (0);
@@ -29,13 +29,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		fclose(fd);
 		return (0);
 	}
-	ssize_t bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
-	if (bytes_written == -1 || (size_t) bytes_written != bytes_read) 
-	{
-		free(buffer);
-		fclose(fp);
-		return 0;
-	}
+	read[x] = '\0';
+	printf("%s", read);
 	free(read);
 	fclose(fd);
 	return (x);
