@@ -19,6 +19,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!read)
 		return (0);
 	letters = fread(read, 1, letters, fd);
+	if (!letters)
+		return (0);
 	read[letters] = '\0';
 	printf("%s", read);
 	free(read);
