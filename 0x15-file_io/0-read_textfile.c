@@ -9,6 +9,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *read;
 	FILE *fd;
+	int x;
 
 	if (!filename)
 		return (0);
@@ -17,13 +18,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	read = malloc(sizeof(char) * letters);
 	if (!read)
+	{
+		fclose(fd);
 		return (0);
-	letters = fread(read, 1, letters, fd);
-	if (!letters)
+	}
+	x = fread(read, 1, letters, fd);
+	if (x < 0)
+	{
+		free(read);
+		fclose(fd);
 		return (0);
+	}
 	read[letters] = '\0';
 	printf("%s", read);
 	free(read);
 	fclose(fd);
-	return (letters);
+	return (x);
 }
