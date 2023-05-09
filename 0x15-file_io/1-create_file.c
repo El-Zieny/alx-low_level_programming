@@ -16,6 +16,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	fwrite(text_content, 1, strlen(text_content), fd);
 	fclose(fd);
-	chmod(filename, S_IRUSR | S_IWUSR);
+	if (chmod(filename, S_IRUSR | S_IWUSR))
+		return (-1);
 	return (1);
 }
