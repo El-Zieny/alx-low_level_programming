@@ -18,8 +18,8 @@ unsigned int binary_to_uint(const char *b)
 		switch (b[x])
 		{
 			case '1':
-				res += 1;
 				res = res << 1;
+				res += 1;
 				break;
 			case '0':
 				res = res << 1;
