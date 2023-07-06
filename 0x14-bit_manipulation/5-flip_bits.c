@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * flip_bits - counts the number of bits needed to flip to represent another number
+ * flip_bits - check the code
  * @n: 1st number
  * @m: 2nd number
  * Return: the number of bits
