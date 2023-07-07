@@ -15,6 +15,8 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	for (x = 0; x < bl; x++)
 	{
+		if (b[x] != '0' && b[x] != '1')
+			return (0);
 		switch (b[x])
 		{
 			case '1':
@@ -26,8 +28,6 @@ unsigned int binary_to_uint(const char *b)
 				if (x)
 					res = res << 1;
 				break;
-			default:
-				return (0);
 		}
 	}
 	return (res);
