@@ -10,24 +10,24 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int res, bl, x;
 
 	res = 0;
-	bl = strlen(b);
 	if (b == NULL)
 		return (0);
+	bl = strlen(b);
 	for (x = 0; x < bl; x++)
 	{
-		if (b[x] != '0' && b[x] != '1')
-			return (0);
 		switch (b[x])
 		{
 			case '1':
-				res += 1;
 				if (x)
 					res = res << 1;
+				res += 1;
 				break;
 			case '0':
 				if (x)
 					res = res << 1;
 				break;
+			default:
+				return (0);
 		}
 	}
 	return (res);
