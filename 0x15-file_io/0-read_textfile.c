@@ -9,7 +9,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *fd;
-	int x;
+	size_t x, c;
 	char *res;
 
 	if (!filename)
@@ -31,8 +31,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	res[x] = '\0';
-	printf("%s\n", res);
+	c = fwrite(res, sizeof(char), letters, stdout);
 	free(res);
 	fclose(fd);
+	if (c != letters)
+		return (0);
 	return (x);
 }
