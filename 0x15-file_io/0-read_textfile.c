@@ -11,20 +11,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	FILE *fd;
 	int x;
 	char *res;
-	
+
 	if (!filename)
 		return (0);
 	fd = fopen(filename, "r");
 	if (!fd)
 		return (0);
-	res = malloc(sizeof(char) * letters);
+	res = malloc(sizeof(char) * letters + 1);
 	if (!res)
 	{
 		fclose(fd);
 		return (0);
 	}
 	x = fread(res, sizeof(char), letters, fd);
-	if (x < 0)
+	if (x <= 0)
 	{
 		free(res);
 		fclose(fd);
