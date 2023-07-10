@@ -17,7 +17,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = fopen(filename, "r");
 	if (!fd)
 		return (0);
-	res = malloc(sizeof(char) * letters + 1);
+	res = malloc(sizeof(char) * (letters + 1));
 	if (!res)
 	{
 		fclose(fd);
@@ -31,10 +31,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	res[x] = '\0';
-	c = fwrite(res, sizeof(char), letters, stdout);
+	c = fwrite(res, sizeof(char), x, stdout);
 	free(res);
 	fclose(fd);
-	if (c != letters)
+	if (c != x)
 		return (0);
 	return (x);
 }
