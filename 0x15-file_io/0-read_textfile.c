@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * read_textfile - a function that reads a text file and prints it to stdout
  * @filename: a file pointer to the text file
@@ -8,12 +9,12 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *fd;
-	size_t x;
+	int x;
 	char *res;
 	
 	if (!filename)
 		return (0);
-	fd = fopen(filename, r);
+	fd = fopen(filename, "r");
 	if (!fd)
 		return (0);
 	res = malloc(sizeof(char) * letters);
@@ -26,10 +27,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (x < 0)
 	{
 		free(res);
-		fcolse(fd);
+		fclose(fd);
 		return (0);
 	}
-	read[x] = '\0';
+	res[x] = '\0';
 	printf("%s\n", res);
 	free(res);
 	fclose(fd);
