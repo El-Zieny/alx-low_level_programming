@@ -14,27 +14,30 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (!filename || !letters)
 		return (0);
-	o = fopen(filename, "r");
-	if (!o)
-		return (0);
-	res = malloc(sizeof(char) * (letters + 1));
+
+	res = malloc(letters);
 	if (!res)
-	{
-		fclose(o);
 		return (0);
-	}
-	r = fread(res, sizeof(char), letters, o);
-	if (x <= 0)
+
+	o = open(filename, O_RDONLY);
+	if (o < 0)
+		return (0);
+	
+	r = read(o,res , letters);
+	if (r < 0)
 	{
 		free(res);
-		fclose(o);
+		close(o);
 		return (0);
 	}
-	res[x] = '\0';
-	w = fwrite(res, sizeof(char), x, STDOUT_FILENO);
+
+	w = write(STDOUT_FILENO, res, r);
+
 	free(res);
-	fclose(o);
-	if (c != x)
+	close(o);
+
+	if (r != w || w < 0)
 		return (0);
+
 	return (x);
 }
