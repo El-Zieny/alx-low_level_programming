@@ -5,19 +5,24 @@
  * @text_content: to be appended
  * Return: 1 if success, -1 otherwise
  */
-int append_text_to_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text)
 {
-	FILE *fd;
-	int chck;
+	int o, w, tl;
 
-	if (!filename || !text_content)
+	if (!filename)
 		return (-1);
-	fd = fopen(filename, "a");
-	if (!fd)
+
+	tl = 0;
+	while (text != NULL && text[tl] != '\0')
+		tl++;
+
+	o = open(filename, O_WRONLY | O_APPEND);
+	w = write(o ,!text ? "" : text, tl);
+
+	if (o < 0 || w < 0)
 		return (-1);
-	chck = fprintf(fd, "%s", text_content);
-	if (chck < 0)
-		return (-1);
-	fclose(fd);
+
+	close(o);
+
 	return (1);
 }
