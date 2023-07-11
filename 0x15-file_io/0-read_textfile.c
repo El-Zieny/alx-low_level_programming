@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
@@ -20,24 +21,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	o = open(filename, O_RDONLY);
-	if (o < 0)
-		return (0);
-	
-	r = read(o,res , letters);
-	if (r < 0)
+	r = read(o, res , letters);
+	w = write(STDOUT_FILENO, res, r);
+
+	if ( r < 0 || o < 0 || r != w || w < 0)
 	{
 		free(res);
-		close(o);
 		return (0);
 	}
-
-	w = write(STDOUT_FILENO, res, r);
 
 	free(res);
 	close(o);
 
-	if (r != w || w < 0)
-		return (0);
-
-	return (x);
+	return (w);
 }
