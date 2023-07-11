@@ -5,23 +5,19 @@
  * @text_content: the content to be written in the created file
  * Return: 1 if success, -1 otherwise
  */
-int create_file(const char *filename, char *text_content)
+int create_file(const char *filename, char *text)
 {
-	FILE *fd;
-	unsigned int c;
+	int o ,w;
 
 	if (!filename)
 		return (-1);
 
-	fd = fopen(filename, "w");
-	if (!fd)
+	o = open(filename, O_RDWR);
+	w = write(o, !text ? "" : text, !text ? 0 : strlen(text);
+
+	if (o < 0 || w < 0)
 		return (-1);
 
-	c = fwrite(text_content, 1, strlen(text_content), fd);
-	if (c != strlen(text_content))
-		return (-1);
-
-	fclose(fd);
-	chmod(filename, S_IRUSR | S_IWUSR);
+	close(o);
 	return (1);
 }
