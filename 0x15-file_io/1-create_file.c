@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * creat_file - check the code
+ * create_file - check the code
  * @filename: file name
- * @text_content: the content to be written in the created file
+ * @text: the content to be written in the created file
  * Return: 1 if success, -1 otherwise
  */
 int create_file(const char *filename, char *text)
