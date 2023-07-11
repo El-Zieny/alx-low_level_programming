@@ -2,7 +2,7 @@
 /**
  * append_text_to_file - check the code
  * @filename: yes
- * @text_content: to be appended
+ * @text: to be appended
  * Return: 1 if success, -1 otherwise
  */
 int append_text_to_file(const char *filename, char *text)
@@ -17,7 +17,7 @@ int append_text_to_file(const char *filename, char *text)
 		tl++;
 
 	o = open(filename, O_WRONLY | O_APPEND);
-	w = write(o ,!text ? "" : text, tl);
+	w = write(o, !text ? "" : text, tl);
 
 	if (o < 0 || w < 0)
 		return (-1);
