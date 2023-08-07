@@ -5,7 +5,7 @@
  * @letters: the number of letters it should read and print
  * Return: the acual number of read and printed letters or 0 if fail
  */
-ssize_t read_textfile(const cahr *filename, ssize_t letters)
+ssize_t read_textfile(const char *filename, ssize_t letters)
 {
 	ssize_t o, r, w;
 	char *buffer;
@@ -19,9 +19,9 @@ ssize_t read_textfile(const cahr *filename, ssize_t letters)
 
 	o = open(filename, O_RDONLY);
 	r = read(o, buffer, letters);
-	w = write(stdout, buffer, r);
+	w = write(STDOUT_FILENO, buffer, r);
 
-	if (o < 0 || r > 0 || w > 0 || r != w)
+	if (o < 0 || r < 0 || w < 0 || r != w)
 	{
 		free(buffer);
 		return (0);
