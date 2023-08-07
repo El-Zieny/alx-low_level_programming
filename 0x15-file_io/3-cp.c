@@ -34,13 +34,13 @@ int main(int ac, char **av)
 	w = write(o, buffer, r);
 	if (w < 0)
 	{
-		fprintf(stderr, "Error: Can't write to %s\n", av[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
 	c = close(o);
 	if (c < 0)
 	{
-		fprintf(stderr, "Error: Can't close fd %i\n", o);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", o);
 		exit(100);
 	}
 	return (0);
