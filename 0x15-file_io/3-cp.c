@@ -26,7 +26,7 @@ int main(int ac, char **av)
 	c = close(o);
 	if (c < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", o);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", o);
 		exit(100);
 	}
 
@@ -40,7 +40,7 @@ int main(int ac, char **av)
 	c = close(o);
 	if (c < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", o);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", o);
 		exit(100);
 	}
 	return (0);
