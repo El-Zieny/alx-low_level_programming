@@ -30,7 +30,7 @@ int main(int ac, char **av)
 		exit(100);
 	}
 
-	o = open(av[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
+	o = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	w = write(o, buffer, r);
 	if (w < 0)
 	{
