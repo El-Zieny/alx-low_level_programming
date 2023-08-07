@@ -3,8 +3,9 @@
  * errs - checks for errors
  * @file_from: to copy from
  * @file_to: to copy to
+ * @av: yes
  */
-void errs(int file_from, int file_to,char **av)
+void errs(int file_from, int file_to, char **av)
 {
 	if (file_from < 0)
 	{
@@ -25,7 +26,7 @@ void errs(int file_from, int file_to,char **av)
  */
 int main(int ac, char **av)
 {
-	int file_from, file_to, r, w, c; 
+	int file_from, file_to, r, w, c;
 	char buffer[1024];
 
 	if (ac != 3)
