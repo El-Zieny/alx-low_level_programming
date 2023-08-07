@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * err - checks for errors
+ * errs - checks for errors
  * @file_from: to copy from
  * @file_to: to copy to
  */
-void err(int file_from, int file_to, **av)
+void errs(int file_from, int file_to,char **av)
 {
 	if (file_from < 0)
 	{
@@ -36,15 +36,17 @@ int main(int ac, char **av)
 
 	file_from = open(av[1], O_RDONLY);
 	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	err(file_from, file_to, av);
+	errs(file_from, file_to, av);
 
 	r = 1024;
 	while (r == 1024)
 	{
 	r = read(file_from, buffer, 1024);
-	(r < 0) ? err(0, -1, av):;
+	if (r < 0)
+		errs(0, -1, av);
 	w = write(file_to, buffer, r);
-	(w < 0) ? err(0, -1, av):;
+	if (w < 0)
+		errs(0, -1, av);
 	}
 	c = close(file_from);
 	if (c < 0)
