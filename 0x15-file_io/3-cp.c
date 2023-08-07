@@ -12,21 +12,21 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		fprintf(stderr, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
-	o = open(av[1],O_RDONLY);
+	o = open(av[1], O_RDONLY);
 	r = read(o, buffer, 1024);
 	if (r < 0)
 	{
-		fprintf(stderr, "Error: Can't read from file %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	c = close(o);
-        if (c < 0)
+	if (c < 0)
 	{
-		fprintf(stderr, "Error: Can't close fd %i\n", o);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", o);
 		exit(100);
 	}
 
