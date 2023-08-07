@@ -45,7 +45,7 @@ int main(int ac, char **av)
 	{
 	r = read(file_from, buffer, 1024);
 	if (r < 0)
-		errs(0, -1, av);
+		errs(-1, 0, av);
 	w = write(file_to, buffer, r);
 	if (w < 0)
 		errs(0, -1, av);
