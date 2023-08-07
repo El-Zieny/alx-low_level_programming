@@ -14,7 +14,7 @@ void errs(int file_from, int file_to, char **av)
 	}
 	if (file_to < 0)
 	{
-		fprintf(stderr, "Error: Can't write to %s\n", av[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
 }
@@ -59,7 +59,7 @@ int main(int ac, char **av)
 	c = close(file_to);
 	if (c < 0)
 	{
-		fprintf(stderr, "Error: Can't close fd %i\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", file_to);
 		exit(100);
 	}
 
