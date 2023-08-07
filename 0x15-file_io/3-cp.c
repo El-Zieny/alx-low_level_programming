@@ -26,7 +26,8 @@ void errs(int file_from, int file_to, char **av)
  */
 int main(int ac, char **av)
 {
-	int file_from, file_to, r, w, c;
+	int file_from, file_to, c;
+	ssize_t r, w;
 	char buffer[1024];
 
 	if (ac != 3)
@@ -36,7 +37,7 @@ int main(int ac, char **av)
 	}
 
 	file_from = open(av[1], O_RDONLY);
-	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
 	errs(file_from, file_to, av);
 
 	r = 1024;
