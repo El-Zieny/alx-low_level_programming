@@ -7,7 +7,7 @@
  */
 int main(int ac, char **av)
 {
-	int o1, o2, r, w, c;
+	int o1, o2, r, w, c1, c2;
 	char buffer[1024];
 
 	if (ac != 3)
