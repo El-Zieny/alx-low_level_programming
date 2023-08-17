@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  * print_dlistint - prints all the elements of a doubly linked list
  * @h: the head of the list
@@ -7,6 +7,7 @@
 size_t print_dlistint(const dlistint *h)
 {
 	int x = 0;
+
 	while (h)
 	{
 		printf(h->n);
