@@ -4,6 +4,7 @@
  * @h: the head of the dlist
  * @idx: the index of the new node
  * @n: the n value of the new node
+ * Return: the new added node if success, NULL if fail
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -37,7 +38,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		}
 		else
 			new->next = NULL;
-	
+
 		prev->next = new;
 		new->prev = prev;
 	}
