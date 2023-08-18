@@ -42,3 +42,20 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	return (new);
 }
+/**
+ * dlistint_len - returns the number of elements in a linked dlistint
+ * @h: the head of the dlistint
+ * Return: the number of elements
+ */
+size_t dlistint_len(const dlistint_t *h)
+{
+	size_t x = 0;
+
+	while (h)
+	{
+		x++;
+		h = h->next;
+	}
+
+	return (x);
+}
