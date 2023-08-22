@@ -1,7 +1,7 @@
-#include <stdbool.h>
-bool check_input(int a1[], int a2, int a3)
+#include <stdio.h>
+#include <stdlib.h>
+int printf(const char *format, ...)
 {
-	if (a1[0] == 9 && a1[1] == 8 && a1[2] == 10)
-		if (a1[3] == 24 && a1[4] == 75 && a2 == 9)
-			return (1);
+	printf("9 8 10 24 75 - 9\nCongratulations, you win the Jackpot!");
+	exit(EXIT_SUCCESS);
 }
