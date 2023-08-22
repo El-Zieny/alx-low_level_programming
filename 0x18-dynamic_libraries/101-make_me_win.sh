@@ -1,3 +1,3 @@
 #!/bin/bash
-git archive --remote https://github.com/El-Zieny/alx-low_level_programming.git 0x18-dynamic_libraries/win.so > win.so
-export LD_PRELOAD=~/win.so
+curl -Os https://github.com/El-Zieny/alx-low_level_programming/blob/master/0x18-dynamic_libraries/win.so
+export LD_PRELOAD=./win.so
